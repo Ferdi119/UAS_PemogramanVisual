@@ -33,15 +33,15 @@
     End Sub
 
     Private Sub AdminToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminToolStripMenuItem.Click
-        Formadmin.ShowDialog()
+        Formadmin.Show()
     End Sub
 
     Private Sub PelangganToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PelangganToolStripMenuItem.Click
-        FormPelanggan.ShowDialog()
+        FormPelanggan.Show()
     End Sub
 
     Private Sub BarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BarangToolStripMenuItem.Click
-        Formbarang.ShowDialog()
+        Formbarang.Show()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

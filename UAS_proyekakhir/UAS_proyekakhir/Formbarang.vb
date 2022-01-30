@@ -188,13 +188,13 @@ Public Class Formbarang
     End Sub
 
     Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub PelangganToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PelangganToolStripMenuItem.Click
-        Me.Hide()
+        Hide()
         Formadmin.Hide()
 
-        FormPelanggan.ShowDialog()
+        FormPelanggan.Show()
     End Sub
 End Class

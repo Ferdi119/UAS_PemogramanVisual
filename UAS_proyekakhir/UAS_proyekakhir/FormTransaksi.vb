@@ -51,7 +51,7 @@ Public Class FormTransaksi
         rd.Read()
         If rd.HasRows Then
             LblNamaPlg.Text = rd!nama
-            LblAlamat.Text = rd!alamat
+            LblAlamat.Text = rd!Email
             LblTlp.Text = rd!telp
         End If
     End Sub

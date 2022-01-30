@@ -42,6 +42,8 @@ Partial Class Formadmin
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PelanganToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -118,7 +120,7 @@ Partial Class Formadmin
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(656, 248)
+        Me.Button1.Location = New System.Drawing.Point(738, 254)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 53)
         Me.Button1.TabIndex = 12
@@ -127,7 +129,7 @@ Partial Class Formadmin
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(656, 320)
+        Me.Button2.Location = New System.Drawing.Point(738, 326)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(114, 53)
         Me.Button2.TabIndex = 13
@@ -136,7 +138,7 @@ Partial Class Formadmin
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(656, 390)
+        Me.Button3.Location = New System.Drawing.Point(738, 396)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(114, 53)
         Me.Button3.TabIndex = 14
@@ -145,7 +147,7 @@ Partial Class Formadmin
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(656, 466)
+        Me.Button4.Location = New System.Drawing.Point(738, 472)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(114, 53)
         Me.Button4.TabIndex = 15
@@ -155,22 +157,22 @@ Partial Class Formadmin
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(63, 296)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 294)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(573, 225)
+        Me.DataGridView1.Size = New System.Drawing.Size(698, 225)
         Me.DataGridView1.TabIndex = 16
         '
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(464, 45)
+        Me.Label5.Location = New System.Drawing.Point(445, 32)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(128, 42)
+        Me.Label5.Size = New System.Drawing.Size(147, 55)
         Me.Label5.TabIndex = 17
-        Me.Label5.Text = "Search Tingkat"
+        Me.Label5.Text = "Search Level"
         '
         'TextBox4
         '
@@ -204,12 +206,31 @@ Partial Class Formadmin
         Me.PelanganToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
         Me.PelanganToolStripMenuItem.Text = "Pelangan"
         '
+        'Label6
+        '
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(464, 113)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(128, 42)
+        Me.Label6.TabIndex = 19
+        Me.Label6.Text = "Email"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(598, 123)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(244, 22)
+        Me.TextBox5.TabIndex = 20
+        '
         'Formadmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(785, 531)
+        Me.ClientSize = New System.Drawing.Size(864, 531)
         Me.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DataGridView1)
@@ -254,4 +275,6 @@ Partial Class Formadmin
     Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BarangToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PelanganToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox5 As TextBox
 End Class

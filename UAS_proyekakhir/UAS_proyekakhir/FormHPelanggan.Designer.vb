@@ -76,7 +76,7 @@ Partial Class FormHPelanggan
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "FormHPelanggan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form Detail Transaksi"
+        Me.Text = "Form Detail Barang"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

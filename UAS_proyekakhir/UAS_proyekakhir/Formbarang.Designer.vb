@@ -58,9 +58,9 @@ Partial Class Formbarang
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(474, 28)
+        Me.Label5.Location = New System.Drawing.Point(448, 28)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(128, 52)
+        Me.Label5.Size = New System.Drawing.Size(154, 52)
         Me.Label5.TabIndex = 32
         Me.Label5.Text = "Search barang"
         '

@@ -103,7 +103,7 @@ Partial Class FormTransaksi
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(190, 44)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Alamat"
+        Me.Label4.Text = "Email"
         '
         'Label5
         '
@@ -438,6 +438,7 @@ Partial Class FormTransaksi
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1118, 795)
         Me.Controls.Add(Me.LblJumBarang)
         Me.Controls.Add(Me.LblItem)

@@ -52,6 +52,9 @@ Partial Class FormMenuPenjualan
         Me.STlabel9 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.STlabel10 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -62,7 +65,7 @@ Partial Class FormMenuPenjualan
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MasterToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.PasswordToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -70,7 +73,7 @@ Partial Class FormMenuPenjualan
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.ToolStripMenuItem1, Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 26)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'LoginToolStripMenuItem
@@ -100,7 +103,7 @@ Partial Class FormMenuPenjualan
         '
         Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminToolStripMenuItem, Me.ToolStripMenuItem2, Me.BarangToolStripMenuItem, Me.PelangganToolStripMenuItem})
         Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
-        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
+        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 26)
         Me.MasterToolStripMenuItem.Text = "Data"
         '
         'AdminToolStripMenuItem
@@ -130,7 +133,7 @@ Partial Class FormMenuPenjualan
         '
         Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenjualanToolStripMenuItem, Me.HistoryPembelianToolStripMenuItem, Me.HistoryPelangganToolStripMenuItem})
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(82, 26)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi"
         '
         'PenjualanToolStripMenuItem
@@ -149,19 +152,19 @@ Partial Class FormMenuPenjualan
         '
         Me.HistoryPelangganToolStripMenuItem.Name = "HistoryPelangganToolStripMenuItem"
         Me.HistoryPelangganToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
-        Me.HistoryPelangganToolStripMenuItem.Text = "History pelanggan"
+        Me.HistoryPelangganToolStripMenuItem.Text = "History Barang"
         '
         'PasswordToolStripMenuItem
         '
         Me.PasswordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GantiPasswordToolStripMenuItem})
         Me.PasswordToolStripMenuItem.Name = "PasswordToolStripMenuItem"
-        Me.PasswordToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
+        Me.PasswordToolStripMenuItem.Size = New System.Drawing.Size(86, 26)
         Me.PasswordToolStripMenuItem.Text = "password"
         '
         'GantiPasswordToolStripMenuItem
         '
         Me.GantiPasswordToolStripMenuItem.Name = "GantiPasswordToolStripMenuItem"
-        Me.GantiPasswordToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.GantiPasswordToolStripMenuItem.Size = New System.Drawing.Size(194, 26)
         Me.GantiPasswordToolStripMenuItem.Text = "Ganti password"
         '
         'StatusStrip1
@@ -233,11 +236,43 @@ Partial Class FormMenuPenjualan
         '
         Me.Timer1.Enabled = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(-4, 53)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(308, 24)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Nama : Ferdi maulana akbar "
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(-4, 94)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(210, 24)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "NIM    : 2019230119"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(257, 242)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 24)
+        Me.Label3.TabIndex = 7
+        '
         'FormMenuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -285,4 +320,7 @@ Partial Class FormMenuPenjualan
     Friend WithEvents Timer1 As Timer
     Friend WithEvents HistoryPembelianToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoryPelangganToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

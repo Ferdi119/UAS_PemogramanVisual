@@ -4,12 +4,14 @@ Public Class Formadmin
         TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
+        TextBox5.Text = ""
         ComboBox1.Items.Clear()
         ComboBox1.Text = ""
         TextBox4.Text = ""
         TextBox1.Enabled = False
         TextBox2.Enabled = False
         TextBox3.Enabled = False
+        TextBox5.Enabled = False
         TextBox4.Enabled = True
         ComboBox1.Enabled = False
 
@@ -21,7 +23,7 @@ Public Class Formadmin
         Button3.Text = "Hapus"
         Button4.Text = "Exit"
         Call koneksi()
-        da = New MySqlDataAdapter("Select idadmin,namaadmin,leveladmin, passadmin From tbl_admin", con)
+        da = New MySqlDataAdapter("Select idadmin, namaadmin, leveladmin, passadmin, emailadmin From tbl_admin", con)
         ds = New DataSet
         da.Fill(ds, "tbl_admin")
         DataGridView1.DataSource = ds.Tables("tbl_admin")
@@ -32,6 +34,7 @@ Public Class Formadmin
         TextBox1.Enabled = True
         TextBox2.Enabled = True
         TextBox3.Enabled = True
+        TextBox5.Enabled = True
         TextBox4.Enabled = False
         ComboBox1.Enabled = True
         ComboBox1.Items.Add("ADMIN")
@@ -69,12 +72,12 @@ Public Class Formadmin
             TextBox1.Enabled = False
             TextBox2.Focus()
         Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
+            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox5.Text = "" Or ComboBox1.Text = "" Then
                 MsgBox("Tolong isi semua data yang dibutuhkan")
             Else
                 Call koneksi()
                 Dim InputData As String = "insert into tbl_admin values('" & TextBox1.Text & "', 
-                            '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & ComboBox1.Text & "')"
+                            '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox5.Text & "', '" & ComboBox1.Text & "')"
                 cmd = New MySqlCommand(InputData, con)
                 cmd.ExecuteNonQuery()
                 MsgBox("Input data telah selesai")
@@ -91,12 +94,13 @@ Public Class Formadmin
             Button4.Text = "Batal"
             Call isi()
         Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
+            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox5.Text = "" Or ComboBox1.Text = "" Then
                 MsgBox("Tolong isi semua data yang kurang")
             Else
                 Call koneksi()
                 Dim Updated As String
-                Updated = "update tbl_admin set namaadmin ='" & TextBox2.Text & "', passadmin = '" & TextBox3.Text & "', leveladmin = '" & ComboBox1.Text & "' where idadmin ='" & TextBox1.Text & "'"
+                Updated = "update tbl_admin set namaadmin ='" & TextBox2.Text & "', passadmin = '" & TextBox3.Text & "', 
+                                emailadmin= '" & TextBox5.Text & "', leveladmin = '" & ComboBox1.Text & "' where idadmin ='" & TextBox1.Text & "'"
                 cmd = New MySqlCommand(Updated, con)
                 cmd.ExecuteNonQuery()
                 MsgBox("Update data telah selesai")
@@ -121,6 +125,7 @@ Public Class Formadmin
                 TextBox1.Text = rd.Item("idadmin")
                 TextBox2.Text = rd.Item("namaadmin")
                 TextBox3.Text = rd.Item("passadmin")
+                TextBox5.Text = rd.Item("emailadmin")
                 ComboBox1.Text = rd.Item("leveladmin")
             End If
         End If
@@ -142,7 +147,7 @@ Public Class Formadmin
             Button4.Text = "Batal"
             Call isi()
         Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
+            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox5.Text = "" Or ComboBox1.Text = "" Then
                 MsgBox("Data admin tidak ada yang dihapus")
             Else
                 Call koneksi()
@@ -171,17 +176,17 @@ Public Class Formadmin
     End Sub
 
     Private Sub BarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BarangToolStripMenuItem.Click
-        Me.Hide()
+        Hide()
         FormPelanggan.Hide()
 
-        Formbarang.ShowDialog()
+        Formbarang.Show()
     End Sub
 
     Private Sub PelanganToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PelanganToolStripMenuItem.Click
-        Me.Hide()
+        Hide()
         Formbarang.Hide()
 
-        FormPelanggan.ShowDialog()
+        FormPelanggan.Show()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

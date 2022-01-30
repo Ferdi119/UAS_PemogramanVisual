@@ -20,6 +20,10 @@ Public Class Formlogin
     Sub kondisiawal()
         TextBox1.Text = ""
         TextBox1.Text = ""
+        CheckBox1.Checked = False
+        CheckBox1.Text = "show"
+
+        TextBox1.Focus()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -45,11 +49,15 @@ Public Class Formlogin
                 FormMenuPenjualan.STlabel6.Text = rd!leveladmin
                 If FormMenuPenjualan.STlabel6.Text = "USER" Then
                     FormMenuPenjualan.AdminToolStripMenuItem.Enabled = False
+                ElseIf FormMenuPenjualan.STlabel6.Text = "ADMIN" Then
+                    FormMenuPenjualan.AdminToolStripMenuItem.Enabled = True
                 End If
             Else
                     MsgBox("Username atau password Salah !", MsgBoxStyle.Information, "Informasi")
                 TextBox1.Text = ""
                 TextBox2.Text = ""
+                CheckBox1.Checked = False
+                CheckBox1.Text = "show"
             End If
 
         End If
